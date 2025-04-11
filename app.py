@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 import os
 import gdown
-
+import pandas as pd
 # -------------------------------
 # Load model, features, and scaler
 # -------------------------------
@@ -68,7 +68,8 @@ with col4:
 # -------------------------------
 # Prepare input data in correct feature order
 # -------------------------------
-raw_input = np.array([user_inputs[feature] for feature in feature_list]).reshape(1, -1)
+
+raw_input = pd.DataFrame([user_inputs], columns=feature_list)
 
 # Apply scaler to the full input (all 10 features)
 scaled_input = scaler.transform(raw_input)

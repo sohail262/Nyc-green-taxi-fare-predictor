@@ -10,7 +10,7 @@ import gdown
 # -------------------------------
 
 if not os.path.exists("best_model_rf_top10.pkl"):
-    url = "https://drive.google.com/file/d/1AFvF29T8gcfTZIgtmTOTFCBYkHzMz6ZC/view?usp=sharing"
+    url = "https://drive.google.com/file/d/1AFvF29T8gcfTZIgtmTOTFCBYkHzMz6ZC/view?usp=drive_link"
     gdown.download(url, "best_model_rf_top10.pkl", quiet=False)
 
 with open("best_model_rf_top10.pkl", "rb") as f:

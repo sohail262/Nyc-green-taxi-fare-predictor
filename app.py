@@ -10,11 +10,11 @@ import gdown
 # -------------------------------
 
 if not os.path.exists("best_model_rf_top10.pkl"):
-    url = "https://drive.google.com/file/d/1EMgZ8L7ZBqWX2rSMAZUxDUT8wz4kWDRY/view?usp=drive_link"
+    url = "https://drive.google.com/file/d/1AFvF29T8gcfTZIgtmTOTFCBYkHzMz6ZC/view?usp=sharing"
     gdown.download(url, "best_model_rf_top10.pkl", quiet=False)
 
-with open("best_model_rf_top10.pkl", "rb") as f:
-    model = pickle.load(f)
+# with open("best_model_rf_top10.pkl", "rb") as f:
+#     model = pickle.load(f)
 
 with open("important_features_top10.pkl", "rb") as f:
     feature_list = pickle.load(f)
